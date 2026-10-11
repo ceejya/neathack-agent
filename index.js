@@ -3,9 +3,12 @@ import express from "express";
 import "dotenv/config";
 import { GoogleGenAI } from "@google/genai";
 import { init, wrapGoogleGenAI } from "neatlogs";
+import { createSalesRouter } from "./src/routes/sales.routes.js";
 
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ extended: true, limit: "10mb" }));
+app.use(express.static("public"));
 
 const PORT = process.env.PORT || 3000;
 
@@ -31,9 +34,14 @@ async function startServer() {
 
   ai = wrapGoogleGenAI(gemini);
 
-  app.get("/", (req, res) => {
+  // Mount SalesPulse AI API routes
+  app.use("/api/sales", createSalesRouter(() => ai));
+
+  app.get("/api/health", (req, res) => {
     res.json({
-      message: "NeatHack Research Agent is running!",
+      status: "ok",
+      message: "SalesPulse AI & NeatHack Agent is running!",
+      version: "1.0.0",
     });
   });
 
@@ -76,8 +84,25 @@ User's question: ${question}`,
 
   
 
-  app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`); 
+  const server = app.listen(PORT, () => {
+    console.log(`\n========================================`);
+    console.log(` SalesPulse AI Server Running!`);
+    console.log(` Web UI: http://localhost:${PORT}`);
+    console.log(` Health: http://localhost:${PORT}/api/health`);
+    console.log(`========================================\n`);
+  });
+
+  server.on("error", (err) => {
+    if (err.code === "EADDRINUSE") {
+      console.error(`\n❌ Error: Port ${PORT} is already in use by another process.`);
+      console.error(`To stop the old process and free port ${PORT}, run:`);
+      console.error(`   kill -9 $(lsof -t -i:${PORT})\n`);
+      console.error(`Or start on another port:`);
+      console.error(`   PORT=3001 npm start\n`);
+    } else {
+      console.error("Server error:", err);
+    }
+    process.exit(1);
   });
 }
 

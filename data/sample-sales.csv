@@ -1,0 +1,39 @@
+date,product,quantity,unit_price,status
+2025-11-03,Parboiled Rice 25kg,25,38000,completed
+2025-11-05,Pure Vegetable Oil 5L,30,14500,completed
+2025-11-08,Tomato Paste Carton,40,9500,completed
+2025-11-12,Seasoning Cubes Pack,50,4200,completed
+2025-11-15,Refined Sugar 10kg,20,18000,completed
+2025-11-18,Parboiled Rice 25kg,20,38000,completed
+2025-11-22,Pure Vegetable Oil 5L,25,14500,completed
+2025-11-25,Tomato Paste Carton,35,9500,completed
+2025-11-28,Parboiled Rice 25kg,5,38000,cancelled
+2025-12-02,Parboiled Rice 25kg,35,38000,completed
+2025-12-05,Pure Vegetable Oil 5L,45,14500,completed
+2025-12-08,Tomato Paste Carton,50,9500,completed
+2025-12-11,Seasoning Cubes Pack,60,4200,completed
+2025-12-15,Refined Sugar 10kg,30,18000,completed
+2025-12-18,Parboiled Rice 25kg,30,38000,completed
+2025-12-22,Pure Vegetable Oil 5L,35,14500,completed
+2025-12-24,Tomato Paste Carton,40,9500,completed
+2025-12-28,Parboiled Rice 25kg,4,38000,cancelled
+2026-01-04,Parboiled Rice 25kg,38,38000,completed
+2026-01-07,Pure Vegetable Oil 5L,40,14500,completed
+2026-01-10,Tomato Paste Carton,45,9500,completed
+2026-01-14,Seasoning Cubes Pack,55,4200,completed
+2026-01-18,Refined Sugar 10kg,25,18000,completed
+2026-01-21,Parboiled Rice 25kg,32,38000,completed
+2026-01-24,Pure Vegetable Oil 5L,38,14500,completed
+2026-01-27,Tomato Paste Carton,42,9500,completed
+2026-01-29,Refined Sugar 10kg,20,18000,completed
+2026-01-30,Seasoning Cubes Pack,10,4200,cancelled
+2026-02-02,Parboiled Rice 25kg,8,38000,completed
+2026-02-05,Pure Vegetable Oil 5L,42,14500,completed
+2026-02-08,Tomato Paste Carton,48,9500,completed
+2026-02-12,Seasoning Cubes Pack,50,4200,completed
+2026-02-15,Refined Sugar 10kg,22,18000,completed
+2026-02-18,Parboiled Rice 25kg,6,38000,completed
+2026-02-21,Pure Vegetable Oil 5L,39,14500,completed
+2026-02-23,Parboiled Rice 25kg,12,38000,cancelled
+2026-02-25,Tomato Paste Carton,44,9500,completed
+2026-02-27,Parboiled Rice 25kg,8,38000,cancelled
